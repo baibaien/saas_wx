@@ -24,7 +24,7 @@ export class PaidBill extends React.Component {
             // 订单
             <div>
                 <div className="bg-white b-b p-a">
-                    <a href="index.tsx">返回</a>
+                    <Link to="">返回</Link>
                     <span className="pull-right"><i className="icon_search"></i>待开票订单
                         <span className="label m-r-sm">2</span>
                         <i className="icon_angle_right"></i>
@@ -92,10 +92,6 @@ export class PaidBill extends React.Component {
     componentDidMount() {
         let billManageUrls = new BillManageUrls();
         getData(billManageUrls.orderPaid())
-            .then((res) => {
-                this.setState = {
-                    bills: res.data.list
-                }
-            })
+
     }
 }

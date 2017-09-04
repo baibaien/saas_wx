@@ -1,0 +1,75 @@
+@import "./css-component/button";
+@import "./css-component/font";
+@import "./css-component/margin";
+@import "./css-component/reset";
+@import "./css-component/table";
+
+html {
+  font-size: 625%;
+}
+@media only screen and (min-width: 480px){
+  html {
+    font-size: 940%!important;
+  }
+}
+@media only screen and (min-width: 560px){
+  html {
+    font-size: 1090%!important;
+  }
+}
+[class*='icon_'] {
+  display: inline-block;
+}
+
+.title {
+  font-size: .12rem;
+  padding: .1rem .15rem .05rem;
+
+}
+.detail {
+  padding-left: .15rem;
+  li {
+    font-size: .14rem;
+    padding: .15rem .15rem .15rem 0;
+  }
+  li + li {
+    border-top:1px solid @bd-color;
+  }
+}
+.tab {
+  span {
+    color:  rgba(80, 80, 80, 0.65);
+  }
+  .active {
+    position: relative;
+    color: #505050;
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      border-top: 2px solid @m-color;
+      left:0;
+      right:0;
+      bottom:-.16rem;
+    }
+  }
+}
+.shadow-bottom {
+  box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+}
+
+.label {
+  padding: 0 .08rem;
+  background: #ffde00;
+  border-radius: 15px;
+  color: #fff;
+  line-height: 0.9;
+  font-size: 12px;
+}
+.label.success {
+background: #33ac37;
+}
+.label.error {
+  background: #c31414;
+  color: #fff !important;
+}

@@ -10,7 +10,8 @@ export class StepFirst extends React.Component {
             <div>
                 <div className="bg-white b-b p-a">
                     <Link to="a">返回</Link>
-                    <Link className="pull-right btn btn-sm" to="a">下一步</Link>
+                    {/*http://blog.csdn.net/yangyonghe8/article/details/74953867*/}
+                    <Link className="pull-right btn btn-sm" to="a">下一步{this.props.location.yg_id}</Link>
                 </div>
                 <h6 className="title p-l p-r">社保缴纳情况</h6>
                 <div className="bg-white">

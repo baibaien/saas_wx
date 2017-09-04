@@ -9,11 +9,15 @@ export class CompleteStaffMsg extends React.Component {
     render() {
         return (
             // 补全员工信息
-            <div>
-                <Route path="/completestaffmsg/" exact component={CompleteMsgIndex}/>
-                <Route path="/completestaffmsg/step1" exact component={StepFirst}/>
-                <Route path="/completeStaffmsg/step2" component={StepSecond}/>
-            </div>
+
+            <BrowserRouter>
+                <div>
+                    <Route path="/CompleteStaffMsg" exact component={CompleteMsgIndex}/>
+                    <Route path="/CompleteStaffMsg/step1" exact component={StepFirst}/>
+                    <Route path="/CompleteStaffMsg2" exact component={StepSecond}/>
+                </div>
+            </BrowserRouter>
+
         )
     }
 }

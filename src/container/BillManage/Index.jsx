@@ -18,11 +18,10 @@ export class BillIndex extends React.Component {
 
         return (
             // 订单
-            <BrowserRouter>
+            <div>
                 <Route path='/Bill' component={PaidBill}/>
                 <Route path='/Bill/Unpaid' component={UnpaidBill}/>
-                {/*<Route path=''/>*/}
-            </BrowserRouter>
+            </div>
 
         )
     }
