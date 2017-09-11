@@ -46,20 +46,18 @@ export class HomePage extends React.Component {
 
     render() {
         return (
-            <div>
-                {/*{   this.state.isLoading*/}
+            <div className="full-h">
+                {/*this.state.isLoading*/}
                 {/*? '加载中。。。'*/}
                 {/*: <div>*/}
-                    <IndexHeader />
-                    <IndexTodo data={this.state.todo_index}/>
-                    <IndexRemind data={this.state.index_remind}/>
-                    <IndexStaffs/>
-                    <IndexAccount/>
-
-                    <div className="m-t-sm p-l p-r p-t-sm p-b-sm bg-white b-t b-b m-b-lg">
-                    更多功能
-                    </div>
-                }
+                <IndexHeader />
+                <IndexTodo data={this.state.todo_index} unorder={this.state.bill_unorder}/>
+                <IndexRemind data={this.state.index_remind}/>
+                <IndexStaffs/>
+                <IndexAccount/>
+                {/*<div className="m-t-sm p-l p-r p-t-sm p-b-sm bg-white b-t b-b m-b-lg">*/}
+                {/*更多功能*/}
+                {/*</div>*/}
             </div>
         )
     }

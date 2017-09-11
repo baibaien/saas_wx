@@ -25,7 +25,7 @@ export class UnpaidBill extends React.Component {
             <div>
                 <div className="bg-white p-a b-b">
                     <a href="index.tsx">返回</a>
-                    <span className="pull-right"><i className="icon_search"></i>待开票订单
+                    <span className="pull-right"><i className="icon_search"></i>等支付订单
                         <span className="label m-r-sm">2</span>
                         <i className="icon_angle_right"></i>
                     </span>

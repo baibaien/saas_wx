@@ -1,38 +1,29 @@
 import React from 'react';
 import {BrowserRouter, Route} from 'react-router-dom'
-import {getData, postData} from "../../fetch/httpRequest"
-import {BillManageUrls} from '../../service/apiService/bill-manage-api/billManageUrl'
 
 import {PaidBill} from './PaidBill/index'
 import {UnpaidBill} from './UnpaidBill/index'
+import {OrderDetail} from './OrderDetail/index'
+import {BillDetail} from './BillDetail/index'
+import {UnBillOrder} from './UnBillOrder/index'
 
 export class BillIndex extends React.Component {
     constructor(props, context) {
         super(props, context);
-        this.state = {
-            bills: []
-        }
     }
 
     render() {
-
         return (
             // 订单
-            <div>
-                <Route path='/Bill' component={PaidBill}/>
-                <Route path='/Bill/Unpaid' component={UnpaidBill}/>
-            </div>
-
+            <BrowserRouter>
+                <div className="full-h">
+                    <Route path='/Bill' exact component={PaidBill}/>
+                    <Route path='/Bill/UnpaidBill'  exact component={UnpaidBill}/>
+                    <Route path='/Bill/UnBillOrder' exact component={UnBillOrder}/>
+                    <Route path='/Bill/Detail/:bill_id' exact component={BillDetail}/>
+                    <Route path='/Bill/OrderDetail/:id' exact component={OrderDetail}/>
+                </div>
+            </BrowserRouter>
         )
-    }
-
-    componentDidMount() {
-        let billManageUrls = new BillManageUrls();
-        getData(billManageUrls.orderPaid())
-            .then((res) => {
-                this.setState = {
-                    bills: res.data.list
-                }
-            })
     }
 }

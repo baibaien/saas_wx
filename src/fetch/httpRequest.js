@@ -1,8 +1,8 @@
 import 'es6-promise'
 import 'whatwg-fetch'
-import {get}  from './get';
-import {post} from './post'
-
+import {getHttpData}  from './getData';
+import {postHttpData} from './postData'
+import {deleteHttpData} from './deletData'
 function testToken() {
     if (window.localStorage.getItem('mayihr_token')) {
     } else {
@@ -16,7 +16,7 @@ function testToken() {
 
 }
 export function getData(url) {
-    let result = get(url);
+    let result = getHttpData(url);
     return result.then(res => res.json()
     ).then(json =>
         json.data
@@ -27,10 +27,23 @@ export function getData(url) {
 }
 
 export function postData(url, data_source) {
-    let result = post(url, data_source);
+    let result = postHttpData(url, data_source);
     return result.then(res => {
         return res.json()
-    }).then(json => {
-        console.log(json);
+    }).then(json =>
+         json.data
+    ).catch((err) => {
+        return err
+    });
+}
+
+export function deleteData(url, data_source) {
+    let result = deleteHttpData(url, data_source);
+    return result.then(res => {
+        return res.json()
+    }).then(json =>
+         json.data
+    ).catch((err) => {
+        return err
     });
 }

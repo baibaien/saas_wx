@@ -13,13 +13,16 @@ export class IndexTodo extends React.Component {
                 <div className="bg-white b-t b-b">
                     <ul className="p-l thumb-list">
                         <li className="p-r clearfix">
-                            <span className="p-l-sm p-r-sm p-t p-b pull-left"><i className="icon_manifesto"></i></span>
-                            <div className="b-b p-t p-b m-l">有未下单支付的账单<span
-                                className="pull-right">
-                                <span className="label error">2</span>
+                            <Link to="/Bill/UnBillOrder">
+                                <span className="p-l-sm p-r-sm p-t p-b pull-left"><i
+                                    className="icon_manifesto"></i></span>
+                                <div className="b-b p-t p-b m-l">有未下单支付的账单<span
+                                    className="pull-right">
+                                <span className="label error">{this.props.unorder.total}</span>
                                 <i
                                     className="icon_angle_right"></i></span>
-                            </div>
+                                </div>
+                            </Link>
                         </li>
                         {
                             this.props.data.gen_bills.map((item, index) => {

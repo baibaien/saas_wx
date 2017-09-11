@@ -13,7 +13,7 @@ export class IndexStaffs extends React.Component {
                 <div className="bg-white b-t b-b">
                     <ul className="p-l ">
                         <li className="p-r">
-                            <Link to="/StaffList">
+                            <Link to="/Staffs">
                     <span className="p-l-sm p-r-sm p-t p-b pull-left"><i
                         className="icon_"></i></span>
                                 <div className="b-b p-t p-b m-l">

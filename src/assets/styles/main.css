@@ -398,6 +398,7 @@ img {
 }
 html {
   width: 100%;
+  min-height: 100%;
 }
 body {
   color: #505050;
@@ -405,6 +406,7 @@ body {
   font-family: "Microsoft Yahei", "PingFang SC", "SimSun", "Helvetica Neue", Helvetica, Arial, sans-serif, Tahoma;
   background: #eee;
   line-height: 1.5;
+  height: 100%;
 }
 fieldset,
 img {

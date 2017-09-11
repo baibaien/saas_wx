@@ -1,5 +1,8 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import {Link, BrowserRouter, Route} from 'react-router-dom'
+import {NotDetail} from './NotDetail/index'
+import {NotIndex} from './NotIndex/index'
+
 export class Notification extends React.Component {
     constructor(props, context) {
         super(props, context)
@@ -7,18 +10,12 @@ export class Notification extends React.Component {
 
     render() {
         return (
-            <div>
-                <div className="bg-white b-b p-a">
-                    <Link to="">返回</Link>
-                    <span className="pull-right"><i className="icon_done_batch"></i>全部标记为已读
-                    </span>
+            <BrowserRouter >
+                <div>
+                    <Route path='/Notice' exact component={NotIndex}/>
+                    <Route path='/Notice/detail/:id' exact component={NotDetail}/>
                 </div>
-                <div className="m-t-sm bg-white b-t b-b">
-                    <ul>
-                        <li>aaa</li>
-                    </ul>
-                </div>
-            </div>
+            </BrowserRouter>
         )
     }
 }

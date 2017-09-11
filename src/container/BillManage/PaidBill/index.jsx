@@ -61,7 +61,7 @@ export class PaidBill extends React.Component {
                         }
                         <li>
                             <div className="clearfix">
-                                <Link to="/Bill/Detail">
+                                <Link to="/Bill/Detail/2">
                                     <div className="pull-right p-t">
                                         <i className="icon_angle_right"></i>
                                     </div>
@@ -79,7 +79,7 @@ export class PaidBill extends React.Component {
                     </ul>
                 </div>
                 <div className="bg-white p-a" style={footer_obj}>
-                    <Link to='Bill/unpaidBill'>
+                    <Link to='/Bill/UnpaidBill'>
                         <span>待支付订单</span>
                         <span className="pull-right"><span className="label error">2</span><i
                             className="icon_angle_right"></i></span>
